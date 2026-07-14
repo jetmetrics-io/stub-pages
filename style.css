@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import url('https://jetmetrics-io.github.io/layout/fonts.css');
 
 .jm-stub {
   /* ---- brand core ---- */
@@ -162,6 +162,170 @@
     padding: var(--jm-space-12) var(--jm-space-4);
   }
   .jm-stub-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================================
+   Юридические документы (Политика ПДн, Пользовательское соглашение)
+   ============================================================ */
+
+.jm-legal {
+  /* ---- brand core ---- */
+  --jm-green: #0E9C7D;
+  --jm-green-press: #0B7D64;
+  --jm-green-deep: #064D2B;
+  --jm-green-tint: #E7F6F1;
+
+  /* ---- neutrals ---- */
+  --jm-ink: #080B0D;
+  --jm-text: #20262E;
+  --jm-muted: #6B7372;
+  --jm-line: #E4E8EC;
+  --jm-bg: #F6F8FA;
+  --jm-surface: #FFFFFF;
+
+  /* ---- type ---- */
+  --jm-font-sans: 'Onest', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --jm-font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  --jm-display-m: 2rem;
+  --jm-body-l: 1.125rem;
+  --jm-body: 1rem;
+  --jm-body-s: 0.875rem;
+  --jm-w-medium: 500;
+  --jm-w-semibold: 600;
+  --jm-w-bold: 700;
+  --jm-lh-tight: 1.15;
+
+  /* ---- space (4px step) ---- */
+  --jm-space-1: 4px;
+  --jm-space-2: 8px;
+  --jm-space-3: 12px;
+  --jm-space-4: 16px;
+  --jm-space-6: 24px;
+  --jm-space-8: 32px;
+  --jm-space-12: 48px;
+  --jm-space-20: 80px;
+
+  /* ---- radii ---- */
+  --jm-r-md: 12px;
+  --jm-r-lg: 20px;
+  --jm-r-pill: 999px;
+
+  font-family: var(--jm-font-sans);
+  color: var(--jm-text);
+  background: var(--jm-surface);
+  padding: var(--jm-space-20) var(--jm-space-6);
+  box-sizing: border-box;
+}
+
+.jm-legal *, .jm-legal *::before, .jm-legal *::after {
+  box-sizing: border-box;
+}
+
+.jm-legal-doc {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.jm-legal-title {
+  font-size: var(--jm-display-m);
+  font-weight: var(--jm-w-bold);
+  line-height: var(--jm-lh-tight);
+  color: var(--jm-ink);
+  margin: 0 0 var(--jm-space-3);
+}
+
+.jm-legal-meta {
+  font-family: var(--jm-font-mono);
+  font-size: var(--jm-body-s);
+  color: var(--jm-muted);
+  margin: 0 0 var(--jm-space-12);
+  padding-bottom: var(--jm-space-6);
+  border-bottom: 1px solid var(--jm-line);
+}
+
+.jm-legal-doc h2 {
+  font-size: 1.25rem;
+  font-weight: var(--jm-w-semibold);
+  color: var(--jm-ink);
+  line-height: 1.3;
+  margin: var(--jm-space-12) 0 var(--jm-space-4);
+}
+
+.jm-legal-doc h3 {
+  font-size: var(--jm-body-l);
+  font-weight: var(--jm-w-semibold);
+  color: var(--jm-ink);
+  line-height: 1.4;
+  margin: var(--jm-space-8) 0 var(--jm-space-3);
+}
+
+.jm-legal-doc p {
+  font-size: var(--jm-body);
+  line-height: 1.65;
+  margin: 0 0 var(--jm-space-4);
+}
+
+.jm-legal-doc ul {
+  margin: 0 0 var(--jm-space-4);
+  padding-left: var(--jm-space-6);
+}
+
+.jm-legal-doc li {
+  font-size: var(--jm-body);
+  line-height: 1.65;
+  margin-bottom: var(--jm-space-2);
+}
+
+.jm-legal-doc a,
+.jm-legal-doc a:visited {
+  color: var(--jm-green) !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.jm-legal-doc a:hover {
+  color: var(--jm-green-press) !important;
+}
+
+/* Врезка: важное пояснение человеческим языком */
+.jm-legal-note {
+  background: var(--jm-green-tint);
+  border-radius: var(--jm-r-md);
+  padding: var(--jm-space-4) var(--jm-space-6);
+  margin: 0 0 var(--jm-space-6);
+}
+
+.jm-legal-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* Реквизиты оператора в конце документа */
+.jm-legal-requisites {
+  margin-top: var(--jm-space-12);
+  padding-top: var(--jm-space-6);
+  border-top: 1px solid var(--jm-line);
+  font-size: var(--jm-body-s);
+  color: var(--jm-muted);
+  line-height: 1.7;
+}
+
+/* ВРЕМЕННО: подсветка незаполненных реквизитов. Убрать после подстановки данных */
+.jm-legal-fill {
+  background: #FFF3C4;
+  color: #6B5200;
+  font-family: var(--jm-font-mono);
+  font-size: 0.9em;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .jm-legal {
+    padding: var(--jm-space-12) var(--jm-space-4);
+  }
+  .jm-legal-title {
     font-size: 1.5rem;
   }
 }
