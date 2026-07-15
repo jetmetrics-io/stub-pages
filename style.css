@@ -145,6 +145,13 @@
   margin: var(--jm-space-2) 0 0;
 }
 
+.jm-stub-proof {
+  font-size: var(--jm-body-s);
+  color: var(--jm-muted);
+  line-height: 1.4;
+  margin: var(--jm-space-4) 0 0;
+}
+
 .jm-stub-actions {
   display: flex;
   flex-wrap: wrap;
