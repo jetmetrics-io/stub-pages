@@ -51,6 +51,12 @@
   background: var(--jm-surface);
   padding: var(--jm-space-20) var(--jm-space-6);
   box-sizing: border-box;
+  /* Заполняем экран за вычетом шапки и футера (~300px), иначе на короткой
+     странице под тёмным футером виден белый фон Tilda. Контент центрируем. */
+  min-height: calc(100vh - 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .jm-stub *, .jm-stub *::before, .jm-stub *::after {
@@ -309,16 +315,6 @@
   font-size: var(--jm-body-s);
   color: var(--jm-muted);
   line-height: 1.7;
-}
-
-/* ВРЕМЕННО: подсветка незаполненных реквизитов. Убрать после подстановки данных */
-.jm-legal-fill {
-  background: #FFF3C4;
-  color: #6B5200;
-  font-family: var(--jm-font-mono);
-  font-size: 0.9em;
-  padding: 1px 6px;
-  border-radius: 4px;
 }
 
 @media (max-width: 640px) {
