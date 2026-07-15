@@ -116,7 +116,7 @@
    пустота. Высота — по контенту. */
 .jm-stub--form {
   min-height: auto;
-  padding-bottom: var(--jm-space-12);
+  padding-bottom: var(--jm-space-4);
 }
 
 .jm-stub-features {
