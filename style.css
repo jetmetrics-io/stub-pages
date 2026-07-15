@@ -111,6 +111,40 @@
   margin: 0;
 }
 
+/* Режим для страниц-заглушек, под которыми идёт форма (например /learning):
+   не растягиваем блок на весь экран, иначе между героем и формой зияет
+   пустота. Высота — по контенту. */
+.jm-stub--form {
+  min-height: auto;
+  padding-bottom: var(--jm-space-12);
+}
+
+.jm-stub-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--jm-space-2);
+  margin: var(--jm-space-2) 0 0;
+  padding: 0;
+}
+
+.jm-stub-features li {
+  background: var(--jm-green-tint);
+  color: var(--jm-green-deep);
+  font-size: var(--jm-body-s);
+  font-weight: var(--jm-w-medium);
+  padding: 6px var(--jm-space-3);
+  border-radius: var(--jm-r-pill);
+}
+
+.jm-stub-note {
+  font-size: var(--jm-body);
+  color: var(--jm-text);
+  line-height: 1.5;
+  margin: var(--jm-space-2) 0 0;
+}
+
 .jm-stub-actions {
   display: flex;
   flex-wrap: wrap;
